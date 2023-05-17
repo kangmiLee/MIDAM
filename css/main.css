@@ -1,0 +1,484 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family:'Pretendard', 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+#mobile-wrapper {
+    margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Pretendard', 'Pretendard';
+    letter-spacing: -0.02rem;
+}
+
+img {
+    width: 100%;
+}
+
+h1, p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+button {
+    border: 0;
+    outline: 0;
+    padding: 0;
+    background: transparent;
+}
+
+a {
+    text-decoration: none;
+}
+
+    a:visited {
+        text-decoration: none;
+        color: inherit;
+    }
+
+/*-----------------------------------------------------------------------------*/
+
+.svgBox {
+    display: block;
+    width: 24px;
+    height: 24px;
+}
+
+.nav-wrapper {
+    height: 64px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 24px;
+}
+
+/*--------------슬라이드 영역 시작---------------------------------------------------------------*/
+
+.mainSlide-wrapper {
+    position: relative;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+}
+    .slider::after {
+        content: "";
+        display: block;
+        padding-bottom: 100%;
+    }
+
+.slider-contents {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.slider-panel {
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+
+.box {
+    position: relative;
+    width: 20%;
+    height: 100%;
+}
+    .box .bg-img {
+        display: block;
+        height: 100%;
+    }
+
+.box-contents {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.box-message {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 50px;
+    letter-spacing: -0.025em;
+    text-align: left;
+    margin: 24px;
+    color: #191919;
+}
+
+.box-1 {
+    background-image: url();
+}
+.box-1 {
+    background-image: url();
+}
+.box-1 {
+    background-image: url();
+}
+.box-1 {
+    background-image: url();
+}
+.box-1 {
+    background-image: url();
+}
+
+.slider-panel {
+    transition-property: transform;
+    transition-duration: 300ms;
+    transform: translateX(0%);
+}
+
+.show-2 .slider-panel { transform: translateX(-20%); }
+.show-3 .slider-panel { transform: translateX(-40%); }
+.show-4 .slider-panel { transform: translateX(-60%); }
+.show-5 .slider-panel { transform: translateX(-80%); }
+
+/*--컨트롤러--*/
+.controller-wrapper {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    letter-spacing: 0;
+}
+
+.controller {
+    background: transparent;
+}
+
+
+.pageBtn {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    transition: 30ms;
+    background: #fff;
+    margin-right: 4px;
+}
+    #pageBtn-5 {
+        margin-right: 0;
+    }
+
+    button.on span {
+        background: #FCDAAC;
+    }
+
+
+/*-----------미담 박스 영역 시작------------------------------------------------------------------*/
+
+.MIDAM-Box-wrapper {
+    height: 516px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.MIDAM-Box-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0px;
+    gap: 8px;
+    color: #191919;
+    height: fit-content;
+
+}
+    .BoxMain-txt {
+        font-family: 'Pretendard';
+        font-size: 24px;
+        line-height: 34px;
+        text-align: center;
+    }
+
+    .BoxSub-txt {
+        font-family: 'Pretendard';
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+    }
+
+    #MIDAM-Box-img {
+        width: 214px;
+        height: 214px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+    }
+
+.joinBox {
+    display: block;
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    background: #ED977C;
+    text-align: center;
+    line-height: 40px;
+    margin: 0 auto;
+    cursor: pointer
+}
+    .joinTxt {
+        font-family: 'Pretendard';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0;
+        color: #FFF9F0;
+    }
+
+/*----------------------------------------------------------------*/
+
+.curation-wrapper {
+    margin-top: 60px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    overflow-x: scroll;
+}
+
+.curation-card {
+    width: 252px;
+    height: 420px;
+    min-width: 252px;
+    padding: 0 24px;
+    background: #FFF9F0;
+    border-radius: 20px;
+    margin-left: 12px;
+}
+
+.card-title {
+    padding-top: 40px;
+}
+    .title-intro {
+        display: block;
+        font-size: 14px;
+        line-height: 18px;
+        color: #191919;
+        padding-bottom: 4px;
+    }
+    .title-product {
+        display: block;
+        font-size: 24px;
+        line-height: 34px;
+        color: #191919;
+    }
+
+
+.card-contentsBox {
+    display: flex;
+    flex-direction: row;
+    margin-top: 52px;
+}
+
+.card-imgBox {
+    width: 64px;
+    min-width: 60px;
+    height: auto;
+    margin-left: 12px;
+    margin-right: 42px;
+    display: flex;
+    align-items: center;
+}
+    .card-describe-txt {
+        font-size: 16px;
+        line-height: 24px;
+        color: #191919;
+        margin-bottom: 32px;
+    }
+    .card-icon {
+        width: 20px;
+        height: 20px;
+        margin-left: 8px;
+        vertical-align: middle;
+        margin-bottom: 1px;
+        cursor: pointer;
+    }
+
+.breweryBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 16px;
+}
+    .WhatBrewery {
+        display: block;
+        font-size: 12px; 
+        line-height: 16px; 
+        color: #767676;
+    }
+    .breweryName {
+        display: block;
+        font-size: 14px;
+        line-height: 16px;
+        color: #191919;
+        padding-right: 2px;
+    }
+
+
+.tastingBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+    .flavor {
+        display: block;
+        font-size: 14px;
+        line-height: 16px;
+        color: #191919;
+        margin-bottom: 2px;
+    }
+    .tastingNote {
+        display: flex;
+        flex-direction: row;
+    }
+        .tasting-score {
+            width: 12px;
+            height: 12px;
+        }
+
+#card-img2 {
+    min-width: 64px;
+}
+
+/*------------상품 판매 영역 시작-----------------------------------------------------------------*/
+
+.itemSales-wrapper {
+    height: 366px;
+    margin-top: 60px;
+    padding-left: 24px;
+    margin-bottom: 80px;
+}
+.item-txt-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin-bottom: 24px;
+}
+    .txtBox {
+        display: flex;
+        flex-direction: column;
+
+        gap: 4px;
+    }
+        .itemMain-txt {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 24px;
+            color: #191919;
+        }
+        .itemSub-txt {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 18px;
+            color: #767676;
+        }
+
+    .showMore {
+        display: block;
+        padding-right: 24px;
+        color: #B6B6B6;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+.item-img-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    overflow-x: scroll;
+}
+
+    .itemBox {
+        display: flex;
+        flex-direction: column;
+        margin-right: 12px;
+        padding: 0px;
+        width: 144px;
+
+        cursor: pointer;
+    }
+        #item-img {
+            width: 144px;
+            height: 166px;
+            background: #E2DFDF;
+            margin-bottom: 8px;
+        }
+        .itemName {
+            font-size: 14px;
+            line-height: 18px;
+            color: #4B4A48;
+            margin-bottom: 4px;
+        }
+        .itemPrice {
+            font-family: 'Pretendard';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 18px;
+            color: 191919;
+        }
+
+    
+/*-----------------------------------------------------------------------------*/
+
+.menu-bar {
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+
+    width: 100%;
+    height: 80px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+
+    border-top: 1px solid #FCDAAC;
+}
+
+.menuBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    width: 25%;
+    height: 80px;
+
+    cursor: pointer;
+}
+
+    .icon {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 2px;
+    }
+
+    .icon-txt {
+        display: block;
+        font-family: 'Pretendard';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: #333333;
+    }
